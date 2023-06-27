@@ -20,7 +20,7 @@ import java.util.Locale;
 public class A03Application {
     public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException, IOException {
         ConfigurableApplicationContext context = SpringApplication.run(A03Application.class);
-        Resource[] resources = context.getResources("classpath:application.properties");
+        Resource[] resources = context.getResources("classpath:application.yml");
         assert resources.length==0;
 
         resources = context.getResources("classpath*:META-INF/spring.factories");
